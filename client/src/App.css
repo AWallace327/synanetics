@@ -1,0 +1,54 @@
+.app {
+  background-color: #1C1F25;
+  color: #F6F7F9;
+  font-weight: 600;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.products-container {
+  position: absolute;
+  width: calc(100% - 360px);
+  padding: 40px;
+}
+
+.product {
+  background-color: #343944;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.product div {
+  margin: 8px;
+}
+
+.basket-container {
+  position: fixed;
+  right: 0;
+  background-color: #23272F;
+  height: 100%;
+  width: 320px;
+}
+
+.basket {
+  margin: 20px;
+  flex: 1;
+}
+
+.basket h1 {
+  margin-bottom: 10px;
+}
+
+.basket-total {
+  margin-top: 20px;
+}
+
+.icon {
+  color: #2D8CAC;
+}

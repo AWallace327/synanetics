@@ -16,3 +16,25 @@ app.get('/products', (req, res) => {
     products: db.getProducts()
   });
 });
+
+app.post('/basket/total', (req, res) => {
+  if (!req.body || !Array.isArray(req.body)) {
+    return res.status(400).send('Must provide array of products');
+  }
+
+  let total = 0;
+
+  for (const product of req.body) {
+    if (!product.id || !product.quantity) {
+      return res.status(400).send('Products must have an ID and a quantity');
+    }
+
+    const productListing = db.getProduct(product.id);
+
+    total += productListing.price * product.quantity;
+  }
+
+  res.json({
+    total
+  });
+});

@@ -3,9 +3,13 @@ import Basket from 'ui/basket/Basket';
 
 export default function Layout() {
   return (
-    <>
-      <Products />
-      <Basket />
-    </>
+    <div className="wrapper">
+      <div className="products-container">
+        <Products />
+      </div>
+      <div className="basket-container">
+        <Basket />
+      </div>
+    </div>
   );
 };
